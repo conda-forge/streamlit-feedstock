@@ -116,4 +116,4 @@ Feedstock Maintainers
 
 * [@randyzwitch](https://github.com/randyzwitch/)
 * [@raybellwaves](https://github.com/raybellwaves/)
-
+* [@karriebear](https://github.com/karriebear/)
