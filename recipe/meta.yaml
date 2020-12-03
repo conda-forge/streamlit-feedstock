@@ -29,7 +29,6 @@ requirements:
     - botocore >=1.13.44
     - cachetools >=4.0
     - click >=7.0
-    - enum-compat
     - gitpython
     - numpy
     - packaging
