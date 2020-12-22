@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "0.73.0" %}
+{% set version = "0.73.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 018541ecb0582c6a3273068ae6db9dcea26c7bd590f014e600cc7458d6eba5a7
+  sha256: 6db734ca36c2c7beb3148c9894b1116837cd9f6d587446c56a3f4cde0453b726
 
 build:
   number: 0
