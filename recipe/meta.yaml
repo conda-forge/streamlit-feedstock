@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "0.71.0" %}
+{% set version = "0.79.0" %}
 
 
 package:
@@ -8,12 +8,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: cdefc723b48129642564bc0f9be8a123d9b2e895a03e39d4dc478ef66f0bf061
+  sha256: 8532aad5a05af08dd48e955fa64bc9fe9e3fb99a4c95514215a597ba56e05121
 
 build:
   number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - streamlit = streamlit.cli:main
 
 requirements:
   host:
@@ -29,7 +31,6 @@ requirements:
     - botocore >=1.13.44
     - cachetools >=4.0
     - click >=7.0
-    - enum-compat
     - gitpython
     - numpy
     - packaging
@@ -65,3 +66,4 @@ extra:
   recipe-maintainers:
     - raybellwaves
     - randyzwitch
+    - karriebear
