@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 20d8620614f80653b79b58aa7d74c0e3a6f6cb9fcaf9046828b2f6e13db8701b
+  sha256: f13f7463d53fb866a1d07dccfacb60333c56dc9f34b001f310475beee71a08a5
 
 build:
   number: 0
@@ -39,6 +39,7 @@ requirements:
     - protobuf >=3.6.0, !=3.11
     - pyarrow
     - pydeck >=0.1.dev5
+    - pympler >=0.9
     - python >=3.6
     - python-dateutil
     - requests
