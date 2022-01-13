@@ -11,7 +11,7 @@ source:
   sha256: 8cdb4c008ff63dc4522e86aed142912de53647244d97f82766a23dfee6ffe564
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -25,6 +25,7 @@ requirements:
   run:
     - altair >=3.2.0
     - astor
+    - attrs
     - base58
     - blinker
     - boto3
