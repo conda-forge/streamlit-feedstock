@@ -41,6 +41,8 @@ requirements:
     - python >=3.6
     - python-dateutil
     - requests
+    - rich
+    - semver
     - toml
     - tornado >=5.0
     - typing_extensions
