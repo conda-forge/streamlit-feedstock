@@ -41,13 +41,12 @@ requirements:
     - python >=3.6
     - python-dateutil
     - requests
-    - semver
     - toml
     - tornado >=5.0
+    - typing_extensions
     - tzlocal
     - validators
     - watchdog
-    - typing-extensions
 
 test:
   imports:
