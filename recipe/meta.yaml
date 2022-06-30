@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python 
     - pipenv
   run:
     - altair >=3.2.0
@@ -38,7 +38,7 @@ requirements:
     - pyarrow
     - pydeck >=0.1.dev5
     - pympler >=0.9
-    - python >=3.6
+    - python
     - python-dateutil
     - requests
     - rich
