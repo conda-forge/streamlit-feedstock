@@ -12,7 +12,7 @@ source:
 
 build:
   number: 1
-  noarch: python
+  # noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - streamlit = streamlit.cli:main
@@ -34,7 +34,7 @@ requirements:
     - packaging
     - pandas >=0.21.0
     - pillow >=6.2.0
-    - protobuf >=3.12, <4
+    - protobuf
     - pyarrow
     - pydeck >=0.1.dev5
     - pympler >=0.9
