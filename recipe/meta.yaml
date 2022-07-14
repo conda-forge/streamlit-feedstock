@@ -16,6 +16,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - streamlit = streamlit.cli:main
+  skip: true  # [s390x]
 
 requirements:
   host:
