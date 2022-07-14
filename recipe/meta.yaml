@@ -60,6 +60,7 @@ test:
     - pip check
   requires:
     - pip
+    - pillow !=9.2.0  # [win]
 
 about:
   home: https://streamlit.io
