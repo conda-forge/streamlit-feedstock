@@ -23,8 +23,8 @@ requirements:
     - pip
     - python 
     - pipenv
-    - setuptools
     - wheel
+    - setuptools
   run:
     - altair >=3.2.0
     - attrs >=16.0.0
