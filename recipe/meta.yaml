@@ -16,7 +16,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - streamlit = streamlit.cli:main
-  skip: true  # [s390x]
+  skip: true  # [s390x or py<37]
 
 requirements:
   host:
@@ -60,7 +60,6 @@ test:
     - pip check
   requires:
     - pip
-    - pillow !=9.2.0  # [win]
 
 about:
   home: https://streamlit.io
