@@ -11,7 +11,7 @@ source:
   sha256: 349674363f4808f3ffaf8021b3134d3cc8f9ffa399457cef5fb734b3ef5fecac
 
 build:
-  number: 4
+  number: 5
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.7
-    - pipenv ==2022.6.7
+    - pipenv ==2022.4.30
   run:
     - altair >=3.2.0
     - attrs >=16.0.0
