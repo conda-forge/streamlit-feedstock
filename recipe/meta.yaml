@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.7
-    - pipenv == 2022.6.7
+    - pipenv ==2022.6.7
   run:
     - altair >=3.2.0
     - attrs >=16.0.0
