@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.10.0" %}
+{% set version = "1.11.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 9479d623dd4bec1fc7bd27e85d5012672351210e640889022ee7b4631c4efb2c
+  sha256: 349674363f4808f3ffaf8021b3134d3cc8f9ffa399457cef5fb734b3ef5fecac
 
 build:
-  number: 1
+  number: 8
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -21,33 +21,33 @@ requirements:
   host:
     - pip
     - python >=3.7
-    - pipenv
+    - pipenv ==2022.1.8
   run:
     - altair >=3.2.0
-    - attrs
-    - blinker
+    - attrs >=16.0.0
+    - blinker >=1.0.0
     - cachetools >=4.0
-    - click >=7.0, <8.1
+    - click >=7.0
     - gitpython !=3.1.19
     - importlib-metadata >=1.4
     - numpy
-    - packaging
+    - packaging >=14.1
     - pandas >=0.21.0
     - pillow >=6.2.0
     - protobuf >=3.12, <4
-    - pyarrow
+    - pyarrow >=4.0
     - pydeck >=0.1.dev5
     - pympler >=0.9
-    - python >=3.6
+    - python >=3.7
     - python-dateutil
-    - requests
-    - rich
+    - requests >=2.4
+    - rich >=10.11.0
     - semver
     - toml
     - tornado >=5.0
-    - typing_extensions
-    - tzlocal
-    - validators
+    - typing_extensions >=3.10.0.0
+    - tzlocal >=1.1
+    - validators >=0.2
     - watchdog
 
 test:
