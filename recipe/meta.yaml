@@ -11,7 +11,7 @@ source:
   sha256: 1bbb406d4eee9acb055e72627212e9f04eea8ef0332f8dfeb6745bdf256c168b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -21,10 +21,8 @@ requirements:
   host:
     - pip
     - python >=3.7
-    - pipenv ==2022.1.8
   run:
     - altair >=3.2.0
-    - attrs >=16.0.0
     - blinker >=1.0.0
     - cachetools >=4.0
     - click >=7.0
@@ -69,3 +67,4 @@ extra:
     - raybellwaves
     - randyzwitch
     - kmcgrady
+    - jroes
