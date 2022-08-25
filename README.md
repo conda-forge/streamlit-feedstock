@@ -144,6 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@kmcgrady](https://github.com/kmcgrady/)
-* [@randyzwitch](https://github.com/randyzwitch/)
 * [@raybellwaves](https://github.com/raybellwaves/)
 
