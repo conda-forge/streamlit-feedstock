@@ -146,4 +146,5 @@ Feedstock Maintainers
 * [@jroes](https://github.com/jroes/)
 * [@kmcgrady](https://github.com/kmcgrady/)
 * [@raybellwaves](https://github.com/raybellwaves/)
+* [@vdonato](https://github.com/vdonato/)
 
