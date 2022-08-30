@@ -11,11 +11,11 @@ source:
   sha256: f0461bebd6c1b58c38f0f602ee9bb6699f66dfe14fd2e05abc25ebe96ff4ba21
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - streamlit = streamlit.cli:main
+    - streamlit = streamlit.web.cli:main
 
 requirements:
   host:
