@@ -11,7 +11,7 @@ source:
   sha256: eb178dc87d9f01e2be11ee9e4d55f79a678597ece56cacbfe5a9236d768d48da
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -32,7 +32,7 @@ requirements:
     - packaging >=14.1
     - pandas >=0.21.0
     - pillow >=6.2.0
-    - protobuf >=3.12, <4
+    - protobuf >=3.12, <4, !=3.20.2
     - pyarrow >=4.0
     - pydeck >=0.1.dev5
     - pympler >=0.9
