@@ -12,7 +12,6 @@ source:
 
 build:
   number: 0
-  # noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - streamlit = streamlit.cli:main
@@ -32,7 +31,7 @@ requirements:
     - cachetools >=4.0
     - click >=7.0
     - gitpython !=3.1.19
-    - importlib-metadata >=1.4
+    - importlib-metadata >=1.4  # [py<38]
     - numpy
     - packaging >=14.1
     - pandas >=0.21.0
