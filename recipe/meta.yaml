@@ -63,6 +63,7 @@ about:
   home: https://streamlit.io
   license: Apache-2.0
   license_family: Apache
+  license_url: https://github.com/streamlit/streamlit/blob/develop/LICENSE
   license_file: LICENSE
   summary: The fastest way to build data apps in Python
   description: |
