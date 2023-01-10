@@ -26,7 +26,6 @@ requirements:
     - setuptools
   run:
     - altair >=3.2.0
-    - attrs >=16.0.0
     - blinker >=1.0.0
     - cachetools >=4.0
     - click >=7.0
