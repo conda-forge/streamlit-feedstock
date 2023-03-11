@@ -1,11 +1,11 @@
-About streamlit
-===============
+About streamlit-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/streamlit-feedstock/blob/main/LICENSE.txt)
 
 Home: https://streamlit.io
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/streamlit-feedstock/blob/main/LICENSE.txt)
 
 Summary: The fastest way to build data apps in Python
 
