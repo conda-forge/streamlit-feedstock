@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.19.0" %}
+{% set version = "1.20.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: e9793d351af5d4f7821c2ea81babf1c78cdbba69f057cf80d602dec56c4408f1
+  sha256: f6e257e033a2532ce9b37c425717a4e885fa4d0e339fa5dcdbbda8d75ec191e9
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - pip
     - python >=3.7, !=3.9.7
   run:
-    - altair >=3.2.0
+    - altair >=3.2.0, <5
     - blinker >=1.0.0
     - cachetools >=4.0
     - click >=7.0
@@ -30,7 +30,7 @@ requirements:
     - importlib-metadata >=1.4
     - numpy
     - packaging >=14.1
-    - pandas >=0.25
+    - pandas >=0.25, <2
     - pillow >=6.2.0
     - protobuf >=3.12, <4
     - pyarrow >=4.0
