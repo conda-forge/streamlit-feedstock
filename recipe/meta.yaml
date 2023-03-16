@@ -22,7 +22,7 @@ requirements:
     - pip
     - python >=3.7, !=3.9.7
   run:
-    - altair >=3.2.0
+    - altair >=3.2.0, <5
     - blinker >=1.0.0
     - cachetools >=4.0
     - click >=7.0
@@ -30,7 +30,7 @@ requirements:
     - importlib-metadata >=1.4
     - numpy
     - packaging >=14.1
-    - pandas >=0.25
+    - pandas >=0.25, <2
     - pillow >=6.2.0
     - protobuf >=3.12, <4
     - pyarrow >=4.0
