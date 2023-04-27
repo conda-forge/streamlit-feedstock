@@ -7,7 +7,7 @@ Home: https://streamlit.io
 
 Package license: Apache-2.0
 
-Summary: The fastest way to build data apps in Python
+Summary: A faster way to build and share data apps
 
 Current build status
 ====================
