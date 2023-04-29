@@ -11,7 +11,7 @@ source:
   sha256: 5bef9bf8deef32814d9565c9df48331e6357eb0b90dabc3ec4f53c44fb34fc73
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -40,7 +40,7 @@ requirements:
     - python-dateutil
     - requests >=2.4
     - rich >=10.11.0
-    - tenacity <9,>=8.0.
+    - tenacity <9,>=8.0.0
     - toml
     - tornado >=6.0.3
     - typing_extensions >=3.10.0.0
