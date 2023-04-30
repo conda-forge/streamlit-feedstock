@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.21.0" %}
+{% set version = "1.22.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: c72d9639508679c5e411d1f886d213777759501d01975285c049dc30db463c1a
+  sha256: 5bef9bf8deef32814d9565c9df48331e6357eb0b90dabc3ec4f53c44fb34fc73
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -30,7 +30,7 @@ requirements:
     - importlib-metadata >=1.4
     - numpy
     - packaging >=14.1
-    - pandas >=0.25, <2
+    - pandas <3,>=0.25
     - pillow >=6.2.0
     - protobuf >=3.12, <4
     - pyarrow >=4.0
@@ -40,6 +40,7 @@ requirements:
     - python-dateutil
     - requests >=2.4
     - rich >=10.11.0
+    - tenacity <9,>=8.0.0
     - toml
     - tornado >=6.0.3
     - typing_extensions >=3.10.0.0
