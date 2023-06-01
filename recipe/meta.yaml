@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.22.0" %}
+{% set version = "1.23.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 5bef9bf8deef32814d9565c9df48331e6357eb0b90dabc3ec4f53c44fb34fc73
+  sha256: 6d9304df669bfacf50763c8a701fcde24d64ce2574bd36a802929c42d658fef8
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
