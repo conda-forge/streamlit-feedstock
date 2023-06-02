@@ -147,4 +147,5 @@ Feedstock Maintainers
 * [@kmcgrady](https://github.com/kmcgrady/)
 * [@raybellwaves](https://github.com/raybellwaves/)
 * [@vdonato](https://github.com/vdonato/)
+* [@xhochy](https://github.com/xhochy/)
 
