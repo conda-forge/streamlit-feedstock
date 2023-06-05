@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.22.0" %}
+{% set version = "1.23.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 5bef9bf8deef32814d9565c9df48331e6357eb0b90dabc3ec4f53c44fb34fc73
+  sha256: af95a78f9d291f12f779cf66a2bdadfafd8a46fe4fcc6ed281492640ed37bf1e
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -22,30 +22,30 @@ requirements:
     - pip
     - python >=3.7, !=3.9.7
   run:
-    - altair >=3.2.0, <5
-    - blinker >=1.0.0
-    - cachetools >=4.0
-    - click >=7.0
-    - gitpython !=3.1.19
-    - importlib-metadata >=1.4
-    - numpy
-    - packaging >=14.1
+    - altair >=3.2.0,<6
+    - blinker >=1.0.0,<2
+    - cachetools >=4.0,<6
+    - click >=7.0,<9
+    - gitpython >=3,<4,!=3.1.19
+    - importlib-metadata >=1.4,<7
+    - numpy >=1,<2
+    - packaging >=14.1,<24
     - pandas <3,>=0.25
-    - pillow >=6.2.0
-    - protobuf >=3.12, <4
+    - pillow >=6.2.0,<10
+    - protobuf >=3.20,<5
     - pyarrow >=4.0
-    - pydeck >=0.1.dev5
-    - pympler >=0.9
+    - pydeck >=0.1.dev5,<1
+    - pympler >=0.9,<2
     - python >=3.7
-    - python-dateutil
-    - requests >=2.4
-    - rich >=10.11.0
+    - python-dateutil >=2,<3
+    - requests >=2.4,<3
+    - rich >=10.11.0,<14
     - tenacity <9,>=8.0.0
-    - toml
-    - tornado >=6.0.3
-    - typing_extensions >=3.10.0.0
-    - tzlocal >=1.1
-    - validators >=0.2
+    - toml <2
+    - tornado >=6.0.3,<7
+    - typing_extensions >=4.0.1,<5
+    - tzlocal >=1.1,<5
+    - validators >=0.2,<1
     - watchdog
 
 test:
@@ -68,3 +68,4 @@ extra:
     - raybellwaves
     - kmcgrady
     - jroes
+    - xhochy
