@@ -11,8 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - streamlit = streamlit.cli:main
   skip: true  # [s390x or py<37]
@@ -21,23 +21,23 @@ requirements:
   host:
     - pip
     - python
-    - pipenv
     - wheel
     - setuptools
   run:
-    - altair >=3.2.0
+    # altair (5.x) will break Streamlit <1.23, see https://github.com/streamlit/streamlit/pull/6219
+    # and https://github.com/streamlit/streamlit/commit/b2e485954538cc18ab4a5542d3410659dafa6b0f
+    - altair >=3.2.0,<5
     - blinker >=1.0.0
     - cachetools >=4.0
     - click >=7.0
-    - gitpython !=3.1.19
     - importlib-metadata >=1.4
     - numpy
     - packaging >=14.1
-    - pandas >=0.21.0
+    # pandas 2.0 support was added only for Streamlit >=1.22.0, see https://github.com/streamlit/streamlit/commit/0e7b95706623acd2fed4028cf81f5294a387caba
+    - pandas >=0.21.0,<2
     - pillow >=6.2.0
     - protobuf >=3.12,<4
     - pyarrow >=4.0
-    - pydeck >=0.1.dev5
     - pympler >=0.9
     - python
     - python-dateutil
@@ -45,32 +45,34 @@ requirements:
     - rich >=10.11.0
     - semver
     - toml
-    - tornado >=5.0
     - typing_extensions >=3.10.0.0
     - tzlocal >=1.1
     - validators >=0.2
     - watchdog  # [not osx]
+    # Snowpark extra dependencies are gitpython, pydeck, and tornado:
+    # Pin GitPython version not equal to 3.1.19 to avoid builds crush, see https://github.com/streamlit/streamlit/pull/3599
+    - gitpython !=3.1.19
+    - pydeck >=0.1.dev5
+    - tornado >=5.0
 
 test:
   imports:
     - streamlit
-  commands:
-    - pip check
   requires:
     - pip
+  commands:
+    - pip check
 
 about:
   home: https://streamlit.io
   license: Apache-2.0
   license_family: Apache
-  license_url: https://github.com/streamlit/streamlit/blob/develop/LICENSE
   license_file: LICENSE
   summary: The fastest way to build data apps in Python
   description: |
     Streamlit lets you turn data scripts into sharable web apps in minutes, not weeks.
-    It’s all Python, open-source, and free!
+    It's all Python, open-source, and free!
   doc_url: https://docs.streamlit.io/
-  doc_source_url: https://github.com/streamlit/docs
   dev_url: https://github.com/streamlit/streamlit
 
 
