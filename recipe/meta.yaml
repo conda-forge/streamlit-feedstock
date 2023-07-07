@@ -50,6 +50,8 @@ requirements:
     - gitpython >=3,<4,!=3.1.19
     - pydeck >=0.1.dev5,<1
     - tornado >=6.0.3,<7
+  run_constrained:
+    python != 3.9.7
 
 test:
   imports:
