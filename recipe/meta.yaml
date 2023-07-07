@@ -1,21 +1,20 @@
 {% set name = "streamlit" %}
-{% set version = "1.16.0" %}
-{% set sha256 = "11f98f9c854f61145e78109d2d0694354122136230397a2b8fdc7d6778883c60" %}
+{% set version = "1.24.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: "3525face94c78792733c56d63a36b48845150e3ba67bb50a19adb4c5975a8225"
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - streamlit = streamlit.cli:main
-  skip: true  # [s390x or py<37]
+  skip: true  # [s390x or py<=37]
 
 requirements:
   host:
@@ -24,36 +23,33 @@ requirements:
     - wheel
     - setuptools
   run:
-    # altair (5.x) will break Streamlit <1.23, see https://github.com/streamlit/streamlit/pull/6219
-    # and https://github.com/streamlit/streamlit/commit/b2e485954538cc18ab4a5542d3410659dafa6b0f
-    - altair >=3.2.0,<5
-    - blinker >=1.0.0
-    - cachetools >=4.0
-    - click >=7.0
-    - importlib-metadata >=1.4
-    - numpy
-    - packaging >=14.1
-    # pandas 2.0 support was added only for Streamlit >=1.22.0, see https://github.com/streamlit/streamlit/commit/0e7b95706623acd2fed4028cf81f5294a387caba
-    - pandas >=0.21.0,<2
-    - pillow >=6.2.0
-    - protobuf >=3.12,<4
+    - altair >=4.0,<6
+    - blinker >=1.0.0,<2
+    - cachetools >=4.0,<6
+    - click >=7.0,<9
+    - importlib-metadata >=1.4,<7
+    - numpy {{ numpy }}
+    - packaging >=14.1,<24
+    - pandas >=0.25.0,<3
+    - pillow >=6.2.0,<10
+    - protobuf >=3.20,<5
     - pyarrow >=4.0
-    - pympler >=0.9
+    - pympler >=0.9,<2
     - python
-    - python-dateutil
-    - requests >=2.4
-    - rich >=10.11.0
-    - semver
-    - toml
-    - typing_extensions >=3.10.0.0
-    - tzlocal >=1.1
-    - validators >=0.2
+    - python-dateutil >=2,<3
+    - requests >=2.4,<3
+    - rich >=10.11.0,<14
+    - tenacity >=8.0.0,<9
+    - toml <2
+    - typing_extensions >=4.0.1,<5
+    - tzlocal >=1.1,<5
+    - validators >=0.2,<1
     - watchdog  # [not osx]
     # Snowpark extra dependencies are gitpython, pydeck, and tornado:
     # Pin GitPython version not equal to 3.1.19 to avoid builds crush, see https://github.com/streamlit/streamlit/pull/3599
-    - gitpython !=3.1.19
-    - pydeck >=0.1.dev5
-    - tornado >=5.0
+    - gitpython >=3,<4,!=3.1.19
+    - pydeck >=0.1.dev5,<1
+    - tornado >=6.0.3,<7
 
 test:
   imports:
