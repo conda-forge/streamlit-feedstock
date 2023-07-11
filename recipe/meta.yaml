@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.24.0" %}
+{% set version = "1.24.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "3525face94c78792733c56d63a36b48845150e3ba67bb50a19adb4c5975a8225"
+  sha256: "fd5f0b64798e9706364408fb589b77595314a6315d13b2d750b963c7ae97f362"
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - streamlit = streamlit.cli:main
-  skip: true  # [s390x or py<=37]
+  skip: true  # [s390x or py<38]
 
 requirements:
   host:
@@ -35,7 +35,7 @@ requirements:
     - protobuf >=3.20,<5
     - pyarrow >=4.0
     - pympler >=0.9,<2
-    - python
+    - python !=3.9.7
     - python-dateutil >=2,<3
     - requests >=2.4,<3
     - rich >=10.11.0,<14
@@ -50,8 +50,6 @@ requirements:
     - gitpython >=3,<4,!=3.1.19
     - pydeck >=0.1.dev5,<1
     - tornado >=6.0.3,<7
-  run_constrained:
-    python != 3.9.7
 
 test:
   imports:
