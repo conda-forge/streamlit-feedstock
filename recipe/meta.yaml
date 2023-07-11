@@ -23,19 +23,19 @@ requirements:
     - wheel
     - setuptools
   run:
+    - python <3.9.7|>3.9.7,<4.0
     - altair >=4.0,<6
     - blinker >=1.0.0,<2
     - cachetools >=4.0,<6
     - click >=7.0,<9
     - importlib-metadata >=1.4,<7
-    - numpy {{ numpy }}
+    - numpy
     - packaging >=14.1,<24
     - pandas >=0.25.0,<3
     - pillow >=6.2.0,<10
     - protobuf >=3.20,<5
     - pyarrow >=4.0
     - pympler >=0.9,<2
-    - python !=3.9.7
     - python-dateutil >=2,<3
     - requests >=2.4,<3
     - rich >=10.11.0,<14
