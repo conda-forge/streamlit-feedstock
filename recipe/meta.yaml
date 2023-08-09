@@ -34,7 +34,7 @@ requirements:
     - pillow >=7.1.0, <10
     - protobuf >=3.20,<5
     - pyarrow >=6.0
-    - pydeck <1
+    - pydeck ==0.8.0
     - pympler >=0.9,<2
     - python >=3.8
     - python-dateutil >=2.7.3, <3
