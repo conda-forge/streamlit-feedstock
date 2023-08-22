@@ -9,9 +9,10 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
   sha256: 8a7c93bee8703869045804afe22e9373c4e974fdb2a3e9abe3b027df3de03119
+  patches: 0001-Fix-pydeck-version.patch
 
 build:
-  number: 5
+  number: 6
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -34,7 +35,7 @@ requirements:
     - pillow >=7.1.0, <10
     - protobuf >=3.20,<5
     - pyarrow >=6.0
-    - pydeck ==0.8.0
+    - pydeck >=0.8.0b4, <1
     - pympler >=0.9,<2
     - python >=3.8
     - python-dateutil >=2.7.3, <3
