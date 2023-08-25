@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.25.0" %}
+{% set version = "1.26.0" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 8a7c93bee8703869045804afe22e9373c4e974fdb2a3e9abe3b027df3de03119
+  sha256: 25475fb15a3cc9fb184945f3fc936f011998bd8386e0c892febe14c9625bf47a
   patches: 0001-Fix-pydeck-version.patch
 
 build:
-  number: 6
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
