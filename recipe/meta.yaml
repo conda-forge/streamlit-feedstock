@@ -9,10 +9,9 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
   sha256: 59a704195bbc669c794ddfcc3818480d9b9c2a282c02b48aa6e6de4b1c38d0a0
-  patches: 0001-Fix-pydeck-version.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -45,7 +44,7 @@ requirements:
     - toml >=0.10.1, <2
     - tornado >=6.0.3,<7
     - typing_extensions >=4.1.0, <5
-    - tzlocal >=1.1,<5
+    - tzlocal >=1.1,<6
     - validators >=0.2,<1
     - watchdog >=2.1.5
 
