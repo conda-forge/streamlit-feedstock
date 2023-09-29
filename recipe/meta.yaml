@@ -11,7 +11,7 @@ source:
   sha256: e987179942d7c518d6cfa3de80737dc1f3857ec4c38ea8a63b62a1ca90cb2506
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -31,7 +31,7 @@ requirements:
     - numpy >=1.19.3, <2
     - packaging >=16.8, <24
     - pandas >=1.3.0, <3
-    - pillow >=7.1.0, <10
+    - pillow >=7.1.0, <11
     - protobuf >=3.20,<5
     - pyarrow >=6.0
     - pydeck >=0.8.0b4, <1
