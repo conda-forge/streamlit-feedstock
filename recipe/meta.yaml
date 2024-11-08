@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.8, !=3.9.7
+    - setuptools
   run:
     - typing-extensions >=4.3.0,<5
     - altair >=4.0,<6
