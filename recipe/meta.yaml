@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.40.0" %}
+{% set version = "1.40.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 6e4d3b90c4934951f97d790daf7953df5beb2916e447ac9f78e1b76a9ef83327
+  sha256: 1f2b09f04b6ad366a2c7b4d48104697d1c8bc33f48bdf7ed939cc04c12d3aec6
 
 build:
   number: 0
@@ -47,7 +47,7 @@ requirements:
     - typing_extensions >=4.3.0,<5
     - tzlocal >=1.1,<6
     - validators >=0.2,<1
-    - watchdog >=2.1.5,<6
+    - watchdog >=2.1.5,<7
 
 test:
   imports:
