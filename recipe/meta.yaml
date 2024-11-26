@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.40.1" %}
+{% set version = "1.40.2" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 1f2b09f04b6ad366a2c7b4d48104697d1c8bc33f48bdf7ed939cc04c12d3aec6
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
+  sha256: 0cc131fc9b18065feaff8f6f241c81164ad37d8d9e3a85499a0240aaaf6a6a61
 
 build:
   number: 0
@@ -30,7 +30,7 @@ requirements:
     - click >=7.0,<9
     - gitpython >=3.0.7,<4,!=3.1.19
     - importlib-metadata >=1.4,<8
-    - numpy >=1.20,<3
+    - numpy >=1.23,<3
     - packaging >=20,<25
     - pandas >=1.4.0,<3
     - pillow >=7.1.0,<12
