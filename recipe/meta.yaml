@@ -11,7 +11,7 @@ source:
   sha256: 6626d32b098ba1458b71eebdd634c62af2dd876380e59c4b6a1e828a39d62d69
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9, !=3.9.7
+    - python {{ python_min }}
     - setuptools
   run:
     - altair >=4.0,<6
@@ -35,7 +35,7 @@ requirements:
     - protobuf >=3.20,<6
     - pyarrow >=7.0
     - pydeck >=0.8.0b4,<1
-    - python >=3.8
+    - python >={{ python_min }}
     - python-dateutil >=2.7.3, <3
     - requests >=2.27,<3
     - rich >=10.14.0,<14
@@ -53,6 +53,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://streamlit.io
