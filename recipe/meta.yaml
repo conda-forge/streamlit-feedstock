@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.41.1" %}
+{% set version = "1.42.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 6626d32b098ba1458b71eebdd634c62af2dd876380e59c4b6a1e828a39d62d69
+  sha256: 8c48494ccfad33e7d0bc5873151800b203cb71203bfd42bc7418940710ca4970
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -42,7 +42,7 @@ requirements:
     - tenacity >=8.1.0,<10
     - toml >=0.10.1,<2
     - tornado >=6.0.3,<7
-    - typing_extensions >=4.3.0,<5
+    - typing_extensions >=4.4.0,<5
     - tzlocal >=1.1,<6
     - watchdog >=2.1.5,<7
 
