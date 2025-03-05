@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - altair >=4.0,<6
     - blinker >=1.0.0,<2
