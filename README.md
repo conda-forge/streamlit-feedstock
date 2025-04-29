@@ -145,7 +145,13 @@ Feedstock Maintainers
 
 * [@jroes](https://github.com/jroes/)
 * [@kmcgrady](https://github.com/kmcgrady/)
+* [@lukasmasuch](https://github.com/lukasmasuch/)
+* [@mayagbarnes](https://github.com/mayagbarnes/)
+* [@raethlein](https://github.com/raethlein/)
 * [@raybellwaves](https://github.com/raybellwaves/)
+* [@sfc-gh-bnisco](https://github.com/sfc-gh-bnisco/)
+* [@sfc-gh-lwilby](https://github.com/sfc-gh-lwilby/)
+* [@sfc-gh-nbellante](https://github.com/sfc-gh-nbellante/)
 * [@vdonato](https://github.com/vdonato/)
 * [@xhochy](https://github.com/xhochy/)
 
