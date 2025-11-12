@@ -9,6 +9,8 @@ Package license: Apache-2.0
 
 Summary: A faster way to build and share data apps
 
+Development: https://github.com/streamlit/streamlit
+
 Current build status
 ====================
 

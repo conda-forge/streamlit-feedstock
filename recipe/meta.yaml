@@ -11,7 +11,7 @@ source:
   sha256: 1e742a9c0b698f466c6f5bf58d333beda5a1fbe8de660743976791b5c1446ef6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -54,6 +54,7 @@ test:
 
 about:
   home: https://streamlit.io
+  dev_url: https://github.com/streamlit/streamlit
   summary: A faster way to build and share data apps
   license: Apache-2.0
   license_file: LICENSE
