@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.51.0" %}
+{% set version = "1.52.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 1e742a9c0b698f466c6f5bf58d333beda5a1fbe8de660743976791b5c1446ef6
+  sha256: 572095458fbd68587776f4d39d7f89dcb4a54c0ee43572713026bd9963580af8
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -23,17 +23,17 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - altair >=4.0,<6,!=5.4.0,!=5.4.1
+    - altair >=4.0,<7,!=5.4.0,!=5.4.1
     - blinker >=1.5.0,<2
     - cachetools >=4.0,<7
     - click >=7.0,<9
     - gitpython >=3.0.7,<4,!=3.1.19
     - numpy >=1.23,<3
-    - packaging >=20,<26
+    - packaging >=20
     - pandas >=1.4.0,<3
     - pillow >=7.1.0,<13
     - protobuf >=3.20,<7
-    - pyarrow >=7.0,<22
+    - pyarrow >=7.0
     - pydeck >=0.8.0b4,<1
     - python >={{ python_min }}
     - requests >=2.27,<3
