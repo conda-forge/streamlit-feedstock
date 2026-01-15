@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.52.2" %}
+{% set version = "1.53.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 64a4dda8bc5cdd37bfd490e93bb53da35aaef946fcfc283a7980dacdf165108b
+  sha256: 0114116d34589f2e652bf4ac735a3aca69807e659f92f99c98e7b620d000838f
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
   run:
     - altair >=4.0,<7,!=5.4.0,!=5.4.1
     - blinker >=1.5.0,<2
-    - cachetools >=4.0,<7
+    - cachetools >=5.5,<7
     - click >=7.0,<9
     - gitpython >=3.0.7,<4,!=3.1.19
     - numpy >=1.23,<3
@@ -40,7 +40,7 @@ requirements:
     - tenacity >=8.1.0,<10
     - toml >=0.10.1,<2
     - tornado >=6.0.3,<7,!=6.5.0
-    - typing_extensions >=4.4.0,<5
+    - typing_extensions >=4.10.0,<5
     - watchdog >=2.1.5,<7
 
 test:
