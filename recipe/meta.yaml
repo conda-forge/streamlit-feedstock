@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.56.0" %}
+{% set version = "1.57.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 1176acfa89ae1318b79078e8efe689a9d02e8d58e325c00fc0e55fa2f3fe8d6a
+  sha256: 0b028d305c1a1a757071b2c9504966787602842fc8af6e873795ca58d2b4d12f
 
 build:
   number: 0
@@ -23,6 +23,13 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
+    - anyio >=4.0.0
+    - httptools >=0.6.3
+    - itsdangerous >=2.1.2
+    - python-multipart >=0.0.10
+    - starlette >=0.40.0
+    - uvicorn >=0.30.0
+    - websockets >=12.0.0
     - altair >=4.0,<7,!=5.4.0,!=5.4.1
     - blinker >=1.5.0,<2
     - cachetools >=5.5,<8
