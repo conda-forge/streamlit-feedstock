@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.59.1" %}
+{% set version = "1.59.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 0f75162a43b1cd2542f34bff3168c4ea56c7a151fa80bfea02499913fbfccfca
+  sha256: 8fcb35df152868d33eec7ad2d89e276499a5351fb861eb1752b76476be7eb582
 
 build:
   number: 0
@@ -40,7 +40,7 @@ requirements:
     - pandas >=1.4.0,<4
     - pillow >=7.1.0,<13
     - protobuf >=3.20,<8
-    - pyarrow >=7.0
+    - pyarrow >=7.0,<25
     - pydeck >=0.8.0b4,<1
     - python >={{ python_min }}
     - requests >=2.27,<3
