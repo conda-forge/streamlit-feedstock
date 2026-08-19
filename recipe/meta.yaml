@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.61.1" %}
+{% set version = "1.62.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 68acf1ff1b6005b19205c2777d832deea0c1edd6fbbf7f43f091b96220e5e35f
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
+  sha256: 9d2571da6e6799cbaf0f59548f5773926260a87a69807cf3e2f0f68f9f5e4d45
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - httptools >=0.6.3,<1
     - itsdangerous >=2.1.2,<3
     - python-multipart >=0.0.10,<1
-    - starlette >=0.46.0,<1.4.0
+    - starlette >=0.46.0,<2
     - uvicorn >=0.30.0,<1
     - websockets >=12.0.0,<17
     - altair >=5.0.0,<7,!=5.4.0,!=5.4.1
@@ -40,7 +40,7 @@ requirements:
     - pandas >=1.4.0,<4
     - pillow >=7.1.0,<13
     - protobuf >=5.26.1,<8
-    - pyarrow >=7.0,<25
+    - pyarrow >=7.0,!=25.0.0,<26
     - pydeck >=0.8.0b4,<1
     - python >={{ python_min }}
     - requests >=2.27,<3
