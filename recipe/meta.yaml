@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.62.0" %}
+{% set version = "1.63.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 9d2571da6e6799cbaf0f59548f5773926260a87a69807cf3e2f0f68f9f5e4d45
+  sha256: 1ea0121884d5606cf055b8c42600528daf07d0401eaabfc8e22f00e235ea53eb
 
 build:
   number: 0
