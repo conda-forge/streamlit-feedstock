@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.64.0" %}
+{% set version = "1.65.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 5c3f9a9dec13b5c5197a9c764ebf1a9d77f9e19c1b4af008779cb45c368961a3
+  sha256: 42acd9ebdf3576a35584977c48a044ec0b5d3e4997fa9248809b9891598ac6a0
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - python-multipart >=0.0.10,<1
     - starlette >=0.46.0,<2
     - uvicorn >=0.30.0,<1
-    - websockets >=12.0.0,<17
+    - websockets >=12.0.0,<18
     - altair >=5.0.0,<7,!=5.4.0,!=5.4.1
     - blinker >=1.5.0,<2
     - cachetools >=5.5,<8
