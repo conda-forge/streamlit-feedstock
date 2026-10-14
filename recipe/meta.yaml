@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.65.0" %}
+{% set version = "1.66.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 42acd9ebdf3576a35584977c48a044ec0b5d3e4997fa9248809b9891598ac6a0
+  sha256: 8b79761394664035ff5d691b4502b70385a39123e6d78a051c79e8ae28c29f8c
 
 build:
   number: 0
@@ -35,12 +35,12 @@ requirements:
     - cachetools >=5.5,<8
     - click >=7.0,<9
     - gitpython >=3.0.7,<4,!=3.1.19
-    - numpy >=1.23,<3
+    - numpy >=1.25.0,<3
     - packaging >=20
-    - pandas >=1.4.0,<4
-    - pillow >=7.1.0,<13
+    - pandas >=1.5.3,<4
+    - pillow >=9.2.0,<13
     - protobuf >=5.26.1,<8
-    - pyarrow >=7.0,!=25.0.0,<26
+    - pyarrow >=10.0.1,!=25.0.0,<27
     - pydeck >=0.8.0b4,<1
     - python >={{ python_min }}
     - requests >=2.27,<3
