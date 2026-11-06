@@ -1,5 +1,5 @@
 {% set name = "streamlit" %}
-{% set version = "1.66.1" %}
+{% set version = "1.67.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/streamlit-{{ version }}.tar.gz
-  sha256: 7710a8b67469da7af7bf3503c9b68afca5676f832f62f9bda1221e0ce11941d1
+  sha256: 58159dae1199212250bfa5fbba0740996129003266c2c37d465151ef76c48f3b
 
 build:
   number: 0
@@ -40,7 +40,7 @@ requirements:
     - pandas >=1.5.3,<4
     - pillow >=9.2.0,<14
     - protobuf >=5.26.1,<8
-    - pyarrow >=10.0.1,!=25.0.0,<27
+    - pyarrow >=12.0.0,!=25.0.0,<27
     - pydeck >=0.8.0b4,<1
     - python >={{ python_min }}
     - requests >=2.27,<3
@@ -48,7 +48,7 @@ requirements:
     - toml >=0.10.1,<2
     - tornado >=6.0.3,<7,!=6.5.0
     - typing_extensions >=4.10.0,<5
-    - watchdog >=2.1.5,<7
+    - watchdog >=2.1.5,<8
 
 test:
   imports:
